@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "mysql2": "^3.14.2"
+  },
+  "name": "express-blog-sql",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianBuonocore02/express-blog-sql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristianBuonocore02/express-blog-sql/issues"
+  },
+  "homepage": "https://github.com/CristianBuonocore02/express-blog-sql#readme",
+  "description": ""
+}
