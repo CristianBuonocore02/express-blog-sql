@@ -1,14 +1,28 @@
 const express = require('express');
 const router = express.Router();
-const posts = require('../db/server.js');
+const connaction = require('../db/connaction.js');
 // const notFound = require("./middlewares/notFound");
 
 // Importiamo i dati
 
 // INDEX
-router.get('/', (req, res) => {
-    res.json(posts); // restituisce tutti i post
-});
+// router.get('/', (req, res) => {
+//     res.json(posts); // restituisce tutti i post
+// });
+
+const index = (req, res) => {
+
+    const sql = 'SELECT * FROM posts'
+
+    connaction.query(sql, (err, results) => {
+        if (err) return res.status(500).json({ error: true, message: err.message })
+        console.log(results);
+
+        res.json(results)
+
+    })
+
+}
 
 // SHOW
 router.get('/:id', (req, res) => {
@@ -92,3 +106,5 @@ router.delete('/:id', (req, res) => {
 
 // module.exports = notFound;
 module.exports = router;
+
+
